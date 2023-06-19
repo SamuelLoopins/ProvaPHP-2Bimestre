@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- Adicione os links para os arquivos CSS do Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Adicione os links para os arquivos JavaScript do Bootstrap -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="index.php">Página inicial - Agenda IFSP</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="cadastroFluxo.html">Cadastrar fluxo de caixa</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="listarFluxo.php">Listar fluxo de caixas</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="consultarFluxo.html">Consultar fluxo de caixas</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Adicione o script JavaScript do Bootstrap -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    
+    <form action="cadastroFluxo.php" method="post" enctype="multipart/form-data">
+        <div>
+            <label for="data">Data cadastro</label>
+            <input type="date" name="data" id="data">
+        </div>
+        <div>
+            <p>Tipo:</p>
+	        <input type="radio" id="tipo" name="tipo" value="saida">
+	        <label for="tipo-S"></label>Saída<br>
+	        <input type="radio" id="tipo" name="tipo" value="entrada">
+	        <label for="tipo-E">Entrada</label>
+        </div>
+        <div>
+            <label for="valor">Valor</label>
+            <input type="text" name="valor" id="valor" placeholder="Valor">
+        </div>
+        <div>
+            <label for="historico">Historico</label>
+            <input type="text" name="historico" id="historico" placeholder="Historico">
+        </div>
+        <div>
+            <label for="cheque">Cheque</label>
+	        <select id="cheque" name="cheque">
+		    <option value="sim">Sim</option>
+		    <option value="nao">Não</option>
+	        </select>
+        </div>
+        <button type="submit" value ="salvar" class="btn btn-success">Enviar</button>
+    </form>
+    
+</body>
+</html>
